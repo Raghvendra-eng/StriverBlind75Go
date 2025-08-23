@@ -37,6 +37,22 @@ func Test_getSum(t *testing.T) {
 			},
 			want: -1,
 		},
+		{
+			name: "test4",
+			args: args {
+				a: -1,
+				b: 1,
+			},
+			want: 0,
+		},
+		{
+			name: "test5",
+			args: args {
+				a: 3,
+				b: 3,
+			},
+			want: 6,
+		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
