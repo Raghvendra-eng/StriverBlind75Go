@@ -66,10 +66,10 @@ func Test_checkTwoSumSortedArray(t *testing.T) {
 		t.Run(tt.name, func(t *testing.T) {
 			got, got1 := checkTwoSumSortedArray(tt.args.arr, tt.args.target)
 			if got != tt.want {
-				t.Errorf("checkTwoSumSortedArray() got = %v, want %v", got, tt.want)
+				t.Errorf("%v: checkTwoSumSortedArray() got = %v, want %v", tt.name, got, tt.want)
 			}
 			if !reflect.DeepEqual(got1, tt.want1) {
-				t.Errorf("checkTwoSumSortedArray() got1 = %v, want %v", got1, tt.want1)
+				t.Errorf("%v: checkTwoSumSortedArray() got1 = %v, want %v", tt.name, got1, tt.want1)
 			}
 		})
 	}
