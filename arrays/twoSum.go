@@ -1,7 +1,5 @@
 package arrays
 
-import "sort"
-
 /*
 
 Problem Statement: Given an array of integers arr[] and an integer target.
@@ -48,16 +46,16 @@ func checkTwoSum(arr []int, target int) (bool, []int) {
 
 // If array is sorted, use two pointers
 func checkTwoSumSortedArray(arr []int, target int) (bool, []int) {
-	sort.Slice(arr, func(i, j int) bool {
-		return arr[i] < arr[j]
-	})
+	// sort.Slice(arr, func(i, j int) bool {
+	// 	return arr[i] < arr[j]
+	// })
 	ans := []int{-1, -1}
-	for i, j := 0, len(arr) - 1; i < j; i++ {
-		if (target == (arr[i] + arr[j])) {
+	for i, j := 0, len(arr) - 1; i < j; {
+		if target == (arr[i] + arr[j]) {
 			ans[0] = i
 			ans[1] = j
 			return true, ans
-		} else if (target > (arr[i] + arr[j])) {
+		} else if target > (arr[i] + arr[j]) {
 			i++
 		} else {
 			j--
