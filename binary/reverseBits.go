@@ -2,8 +2,6 @@ package binary
 
 /**
 Reverse bits of a given 32 bits signed integer.
-
-
 **/
 func reverseBits(n int) int {
     ans := 0
